@@ -62,7 +62,7 @@ error[E0512]: transmute called with types of different sizes
 49 |     mem::transmute::<fn(), u32>(main);
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |
-   = note: source type: fn() (64 bits)
+   = note: source type: fn() ($PTR bits)
    = note: target type: u32 (32 bits)
 
 error[E0591]: can't transmute zero-sized type
@@ -101,7 +101,7 @@ error[E0512]: transmute called with types of different sizes
 66 |     mem::transmute::<Option<fn()>, u32>(Some(main));
    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    |
-   = note: source type: std::option::Option<fn()> (64 bits)
+   = note: source type: std::option::Option<fn()> ($PTR bits)
    = note: target type: u32 (32 bits)
 
 error: aborting due to 11 previous errors

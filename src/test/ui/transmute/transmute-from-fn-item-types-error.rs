@@ -8,10 +8,10 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-// ignore-x86
-// ignore-arm
-// ignore-emscripten
-// ignore 32-bit platforms (test output is different)
+// normalize-stderr-32bit: "fn() (32 bits)" -> "fn() ($PTR bits)"
+// normalize-stderr-64bit: "fn() (64 bits)" -> "fn() ($PTR bits)"
+// normalize-stderr-32bit: "Option<fn()> (32 bits)" -> "Option<fn()> ($PTR bits)"
+// normalize-stderr-64bit: "Option<fn()> (64 bits)" -> "Option<fn()> ($PTR bits)"
 
 use std::mem;
 
